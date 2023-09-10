@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Quiz App</title>
+</head>
+<body>
+    <h1>Quiz App</h1>
+    <form method="get">
+        <div id="quiz-container">
+            {% for question in questions %}
+            <div class="question-card">
+                <h2>Question {{ loop.index }}</h2>
+                <p>{{ question.question }}</p>
+                <input type="text" id="answer-{{ loop.index0 }}" name="answer-{{ loop.index0 }}" placeholder="Your Answer">
+            </div>
+            {% endfor %}
+            <button type="submit" id="submit">Submit</button>
+        </div>
+    </form> 
+</body>
+</html>
